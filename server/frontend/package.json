@@ -14,7 +14,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && rm -rf ../demoServer/pages &&mv build ../demoServer/pages",    
+    "build": "react-scripts build && rm -rf ../backend/pages &&mv build ../backend/pages",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
