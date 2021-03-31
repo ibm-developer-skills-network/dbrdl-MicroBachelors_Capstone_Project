@@ -3,18 +3,9 @@ import React from 'react';
 import HomePage from './homepage.js';
 import ContactUs from './contactus.js';
 
-window.watsonAssistantChatOptions = {
-    integrationID: "f071e502-b562-4c16-ad6d-e2cc94005cd1", // The ID of this integration.
-    region: "eu-gb", // The region your integration is hosted in.
-    serviceInstanceID: "815b0cb8-969a-420f-a759-7ef5016c1b0e", // The ID of your service instance.
-    onLoad: function(instance) { instance.render(); }
-  };
-setTimeout(function(){
-  const t=document.createElement('script');
-  t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
-  document.head.appendChild(t);
-});
-
+/*
+Copy the Web Chat code from Watson Assitant and paste it here
+*/
 
 class App extends React.Component {
 
@@ -39,6 +30,10 @@ class App extends React.Component {
               <li class="nav-item active">
                 <a class="nav-link" href="#" onClick={this.setPageHome}>Home <span class="sr-only">(current)</span></a>
               </li>
+                /*
+                Add more tabs and action items for the tabs to give the dealership website a real feel. 
+                */
+        
               <li class="nav-item">
                 <a class="nav-link" href="#" onClick={this.setPageContactUs}>Contact Us</a>
               </li>
