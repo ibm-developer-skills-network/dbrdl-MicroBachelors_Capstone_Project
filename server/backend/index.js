@@ -5,6 +5,8 @@ const app = new express();
 //Adding a middleware to set the path for all static pages
 app.use(express.static('pages'))
 
-app.listen(8080, () => {
-  console.log(`Listening at http://localhost:8080`)
+const PORT = process.env.PORT || 8080;
+
+app.listen(PORT, () => {
+  console.log(`Listening at http://localhost:${PORT}`)
 })
