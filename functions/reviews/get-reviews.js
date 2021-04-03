@@ -1,3 +1,4 @@
+const logger = require('pino')();
 /**
   *
   * main() will be run when you invoke this action
@@ -35,3 +36,5 @@ function main(params) {
     ]
   };
 }
+
+exports.main = main;

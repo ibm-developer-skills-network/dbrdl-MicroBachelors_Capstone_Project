@@ -7,11 +7,13 @@
   * @return The output of this action, which must be a JSON object.
   *
   */
+
+const logger = require('pino')();
+
 function main(params) {
   // given a date
   // convert to day
   // return time slots
-
   if (params && params.date) {
     const d = new Date(params.date);
     switch (d.getDay()) {
@@ -45,4 +47,4 @@ function main(params) {
   };
 }
 
-// console.log(main({ date: "2021-03-21" }));
+exports.main = main;

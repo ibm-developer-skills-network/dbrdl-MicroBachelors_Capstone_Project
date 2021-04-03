@@ -1,0 +1,36 @@
+packages:
+  # this is the package name
+  dealership-package:
+    version: 1.0
+    license: Apache-2.0
+    inputs:
+      CLOUDANT_URL:
+        type: string
+        value: $CLOUDANT_URL
+      ClOUDANT_APIKEY:
+        type: string
+        value: $ClOUDANT_APIKEY
+    actions:
+      # name of the action
+      get-reviews:
+        # source for the action; in this case it is a folder
+        function: reviews
+        runtime: nodejs:12
+        # publish the action as a web action
+        web: yes
+      get-timeslots:
+        # source for the action; in this case it is a folder
+        function: timeslots
+        runtime: nodejs:12
+        # publish the action as a web action
+        web: yes
+    apis:
+      dealership-api:
+        api:
+          get-reviews:
+            get-reviews:
+              method: GET
+          get-timeslots:
+            get-timeslots:
+              method: GET
+
