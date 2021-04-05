@@ -7,11 +7,11 @@ on:
 
 # Environment variables available to all jobs and steps in this workflow
 env:
-  IBM_CLOUD_REGION: ${{secrets.IBM_CLOUD_REGION}}
-  IBM_CLOUD_GROUP: ${{secrets.IBM_CLOUD_GROUP}}
-  IBM_CLOUD_SPACE: ${{secrets.IBM_CLOUD_SPACE}}
-  IBM_CLOUD_ORG: ${{secrets.IBM_CLOUD_ORG}}
-  MANIFEST_NAME: ${{secrets.MANIFEST_NAME}}
+  IBM_CLOUD_REGION: eu-gb
+  IBM_CLOUD_GROUP: default
+  IBM_CLOUD_SPACE: dev-uk
+  IBM_CLOUD_ORG: ulidder@us.ibm.com
+  MANIFEST_NAME: manifest.yml
   IBM_CLOUD_API: ${{secrets.IBM_CLOUD_API_KEY}}
   CI: false
 
