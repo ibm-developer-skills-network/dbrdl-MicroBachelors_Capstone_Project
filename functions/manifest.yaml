@@ -22,6 +22,6 @@ packages:
         api:
           get-details:
             get-details:
-              method: GET
+              method: POST
 
 
