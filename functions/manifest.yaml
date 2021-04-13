@@ -29,8 +29,8 @@ packages:
         api:
           get-reviews:
             get-reviews:
-              method: GET
+              method: POST
           get-timeslots:
             get-timeslots:
-              method: GET
+              method: POST
 
