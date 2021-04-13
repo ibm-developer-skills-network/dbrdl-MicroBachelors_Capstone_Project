@@ -9,7 +9,7 @@ packages:
         value: $CLOUDANT_URL
       ClOUDANT_APIKEY:
         type: string
-        value: $ClOUDANT_APIKEY
+        value: $CLOUDANT_APIKEY
     actions:
       get-details:
         # source for the action; in this case it is a folder
