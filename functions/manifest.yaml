@@ -11,26 +11,17 @@ packages:
         type: string
         value: $ClOUDANT_APIKEY
     actions:
-      # name of the action
-      get-reviews:
+      get-details:
         # source for the action; in this case it is a folder
-        function: reviews
-        runtime: nodejs:12
-        # publish the action as a web action
-        web: yes
-      get-timeslots:
-        # source for the action; in this case it is a folder
-        function: timeslots
+        function: details
         runtime: nodejs:12
         # publish the action as a web action
         web: yes
     apis:
       dealership-api:
         api:
-          get-reviews:
-            get-reviews:
-              method: POST
-          get-timeslots:
-            get-timeslots:
-              method: POST
+          get-details:
+            get-details:
+              method: GET
+
 
