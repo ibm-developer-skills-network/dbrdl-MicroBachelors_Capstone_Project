@@ -7,7 +7,7 @@ packages:
       CLOUDANT_URL:
         type: string
         value: $CLOUDANT_URL
-      ClOUDANT_APIKEY:
+      CLOUDANT_APIKEY:
         type: string
         value: $CLOUDANT_APIKEY
     actions:

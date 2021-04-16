@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@cloudant/cloudant": "^4.3.1",
     "pino": "^6.11.2"
   }
 }
