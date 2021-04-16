@@ -13,7 +13,16 @@ function main(params) {
   return new Promise((resolve, reject) => {
     if (params && params.type === "reviews") {
       getReviews(params).then(reviews => {
-        resolve({"reviews":reviews.docs})
+        let retObj =  {};
+        retObj.values =[];
+
+        reviews.docs.forEach((value)=>{
+          retObj.values.push({"text":JSON.stringify(value)});
+        })
+        retObj.response_type = "text";
+        retObj.selection_policy = "multiline";
+
+        resolve({"reviews":[retObj]});
       });
     } else if (params && params.type === "timeslots") {
       if (params.date) {
@@ -24,7 +33,6 @@ function main(params) {
     }
   })
 }
-
 function getReviews(params) {
   console.log(params.CLOUDANT_URL);
   console.log(params.CLOUDANT_APIKEY);
