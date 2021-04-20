@@ -13,7 +13,9 @@ function main(params) {
   return new Promise((resolve, reject) => {
     if (params && params.type === "reviews") {
       getReviews(params).then(reviews => {
-        resolve({"reviews":reviews.docs})
+       
+       {"reviews":[{"response_type":"text","selection_policy":"multiline","values":[{"text":"{\"_id\":\"7874883de287251723eba69b66f1d8cc\",\"_rev\":\"1-0bc5ea8ab8020a9918143e07c63a9807\",\"id\":45,\"name\":\"Jerri Largen\",\"dealership\":14,\"review\":\"Polarised client-driven challenge\",\"purchase\":false,\"purchase_date\":\"05/29/2020\",\"car_make\":\"Volkswagen\",\"car_model\":\"Passat\",\"car_year\":1996}"}]}]}
+        resolve({"reviews":reviews.docs[0].values})
       });
     } else if (params && params.type === "timeslots") {
       if (params.date) {
