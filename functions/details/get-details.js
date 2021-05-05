@@ -33,27 +33,12 @@ function getReviews(params) {
   const db = cloudant.db.use('reviews')
 
   return db.find({ selector: { dealership: 14 }}) ;
-
-  // db.find({ selector: { dealership: 14 } }, function (err, result) {
-  //   if (err) {
-  //     throw err;
-  //   }
-
-  //   console.log('Found %d documents', result.docs.length);
-  //   console.log(JSON.stringify(result));
-  //   result.docs.forEach(review => {
-  //     console.log('  Doc id: %s', review._id);
-  //     reviews.push(review)
-  //   });
-  // });
-  // return reviews;
 }
 
 
 function getTimeSlots(date) {
 
   // ideally the code would look this up in the database, but due to limited time, this function returns some hardcoded values at this time
-  console.log("Inga varumbodhu date  " + date);
   const d = new Date(date);
 
   let result = {
@@ -110,9 +95,7 @@ function getTimeSlots(date) {
 
 
 function getWeekend(result) {
-  //Learner: add code to return the following available times for the weekend:
-  // 7:00am - 9:00am
-  // 2:00pm - 3:00pm
+ //Implement it if you want to challenge yourself.
 }
 
 function getSlots(result) {
@@ -137,15 +120,6 @@ function getSlots(result) {
 
   return result;
 }
-
-// main({
-//   type: "reviews",
-//   CLOUDANT_APIKEY: "vg7UbPIWuF5VgcQckaXlN71OvC-bIS4dImK3QIJfCWFp",
-//   CLOUDANT_URL: "https://923526c1-b1da-4c83-a39f-54372cb71c8d-bluemix.cloudantnosqldb.appdomain.cloud"
-// }).then(response => {
-//   console.log('response');
-//   console.log(response);
-// })
 
 exports.main = main;
 
