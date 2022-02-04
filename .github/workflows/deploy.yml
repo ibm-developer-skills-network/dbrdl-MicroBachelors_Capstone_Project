@@ -8,9 +8,9 @@ on:
 # Environment variables available to all jobs and steps in this workflow
 env:
   IBM_CLOUD_REGION: eu-gb
-  IBM_CLOUD_GROUP: default
-  IBM_CLOUD_SPACE: dev-uk
-  IBM_CLOUD_ORG: ulidder@us.ibm.com
+  IBM_CLOUD_GROUP: ibmedx
+  IBM_CLOUD_SPACE: dealership
+  IBM_CLOUD_ORG: ceeeagle-org
   MANIFEST_NAME: manifest.yml
   IBM_CLOUD_API: ${{secrets.IBM_CLOUD_API_KEY}}
   CI: false
