@@ -32,7 +32,7 @@ function getReviews(params) {
   const cloudant = Cloudant({ url: params.CLOUDANT_URL, plugins: { iamauth: { iamApiKey: params.CLOUDANT_APIKEY } } });
   const db = cloudant.db.use('reviews')
 
-  return db.find({ selector: { dealership: 14 }}) ;
+  return db.find({ selector: { dealership: 13 }}) ;
 }
 
 
