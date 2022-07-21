@@ -2,6 +2,8 @@ import './bootstrap.min.css';
 import React from 'react';
 import HomePage from './homepage.js';
 import ContactUs from './contactus.js';
+import Dealer from './dealer.js';
+import Cars from './cars.js';
 
   window.watsonAssistantChatOptions = {
       integrationID: "2e1b4c90-b73b-4696-b458-28e4d93bda1c", // The ID of this integration.
@@ -25,6 +27,14 @@ class App extends React.Component {
     this.setState({pageshown:<HomePage/>});    
   }
   
+  setPageDealer = ()=> {
+    this.setState({pageshown:<Dealer/>});    
+  }
+
+  setPageCars = ()=> {
+    this.setState({pageshown:<Cars/>});    
+  }
+
   setPageContactUs = ()=> {
     this.setState({pageshown:<ContactUs/>});    
   }
@@ -39,10 +49,10 @@ class App extends React.Component {
                 <a class="nav-link" href="#" onClick={this.setPageHome}>Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" onClick={this.setPageContactUs}>About Us</a>
+                <a class="nav-link" href="#" onClick={this.setPageCars}>Cars</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" onClick={this.setPageContactUs}>Dealers</a>
+                <a class="nav-link" href="#" onClick={this.setPageDealer}>Dealers</a>
               </li>    
               <li class="nav-item">
                 <a class="nav-link" href="#" onClick={this.setPageContactUs}>Contact Us</a>
