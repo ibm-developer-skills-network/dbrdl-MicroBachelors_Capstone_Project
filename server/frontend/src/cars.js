@@ -1,15 +1,15 @@
 import './bootstrap.min.css';
 import React from 'react';
 
-class ContactUs extends React.Component {
+class Cars extends React.Component {
   render() {
     return (
       <div>
         <div style={{display:"flex"}}>
-        <img src='/contatus.jpeg' style={{width: "300px"}}/>
+        <img src='/car.png' style={{width: "500px"}}/>
         <div style={{margin:"100px"}}>
              <span style={{margin:"60px"}}>
-             "We're located by Union Square on the corner of 13th and Broadway"
+             "Here you'll find all our cars on sale"
                </span >
            </div>
 
@@ -20,4 +20,4 @@ class ContactUs extends React.Component {
   }
 }
 
-export default ContactUs;
+export default Cars;
