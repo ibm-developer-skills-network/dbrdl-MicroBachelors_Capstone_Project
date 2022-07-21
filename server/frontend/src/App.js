@@ -3,9 +3,17 @@ import React from 'react';
 import HomePage from './homepage.js';
 import ContactUs from './contactus.js';
 
-/*
-Copy the Web Chat code from Watson Assitant and paste it here
-*/
+  window.watsonAssistantChatOptions = {
+      integrationID: "2e1b4c90-b73b-4696-b458-28e4d93bda1c", // The ID of this integration.
+      region: "eu-gb", // The region your integration is hosted in.
+      serviceInstanceID: "71d62aa6-0a45-437b-b4b4-4d5988f135c1", // The ID of your service instance.
+      onLoad: function(instance) { instance.render(); }
+    };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js"
+    document.head.appendChild(t);
+  });
 
 class App extends React.Component {
 
@@ -30,10 +38,12 @@ class App extends React.Component {
               <li class="nav-item active">
                 <a class="nav-link" href="#" onClick={this.setPageHome}>Home <span class="sr-only">(current)</span></a>
               </li>
-                /*
-                Add more tabs and action items for the tabs to give the dealership website a real feel. 
-                */
-        
+              <li class="nav-item">
+                <a class="nav-link" href="#" onClick={this.setPageContactUs}>About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" onClick={this.setPageContactUs}>Dealers</a>
+              </li>    
               <li class="nav-item">
                 <a class="nav-link" href="#" onClick={this.setPageContactUs}>Contact Us</a>
               </li>
