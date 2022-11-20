@@ -1,0 +1,71 @@
+name: 'Lint Code'
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [master, main]
+  pull_request:
+    branches: [master, main]
+
+jobs:
+  lint_function_js:
+    name: Linting JavaScript Function 
+    runs-on: ubuntu-latest 
+    steps:
+      - name: Install NodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Code Checkout
+        uses: actions/checkout@v3
+
+      - name: Install Dependencies
+        run: npm install
+        working-directory: functions
+
+      - name: Code Linting
+        run: npm run lint
+        working-directory: functions
+
+  lint_server_backend:
+    name: Linting Backend
+    runs-on: ubuntu-latest 
+    steps:
+      - name: Install NodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Code Checkout
+        uses: actions/checkout@v3
+
+      - name: Install Dependencies
+        run: npm install
+        working-directory: server/backend
+
+      - name: Code Linting
+        run: npm run lint
+        working-directory: server/backend
+  
+  lint_server_frontend:
+    name: Linting Frontend
+    runs-on: ubuntu-latest 
+    steps:
+      - name: Install NodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Code Checkout
+        uses: actions/checkout@v3
+
+      - name: Install Dependencies
+        run: npm install
+        working-directory: server/frontend
+
+      - name: Code Linting
+        run: npm run lint
+        working-directory: server/frontend
+    
+
