@@ -93,7 +93,6 @@ function getTimeSlots(date) {
 }
 
 
-
 function getWeekend(result) {
  //Implement it if you want to challenge yourself.
 }
